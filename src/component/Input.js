@@ -5,7 +5,7 @@ import "../Styles/Input.css";
 
 const Input = () => {
     const [input,setInput] = useState('');
-    const [error,setError] = useState(true);
+    const [error,setError] = useState(false);
     const dispatch = useDispatch();
     const handleSubmit = (e)=>{
 
