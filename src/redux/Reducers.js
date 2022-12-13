@@ -20,7 +20,7 @@ const todoReducer = (state=initialData,action) =>{
                 ]
             }
         case DELETE_TODO: 
-
+            prompt("are you sure ");
            const newList =  state.list.filter((element)=>element.id != action.id)
             return{
                     ...state,
