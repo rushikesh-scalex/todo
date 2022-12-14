@@ -24,11 +24,12 @@
 Delete Button Div
 */
 .deleteDiv{
-    padding: .5%;
+    padding: 1px;
     font-size: large;
     font-weight: 800;
     letter-spacing: 1px;
     color: white;
     background-color: red;
     cursor:pointer;
+    margin-right: 60px;
 }

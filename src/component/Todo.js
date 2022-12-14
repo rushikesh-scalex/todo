@@ -1,25 +1,28 @@
-import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { addTodo, deleteTodo, removeTodo } from '../redux/Actions';
+import { hideModal, showModal } from '../redux/Actions';
 import Header from './Header';
 import Input from './Input';
 import List from './List';
+import ListHeader from './ListHeader';
+import Modal from './Modal';
+import Space from './Space';
 
 const Todo = () => {
-    const [input, setInput] = useState('');
-    const dispatch = useDispatch();
-    const list = useSelector(state => state.todoReducer.list);
-    // console.log("list is = "+list.length);
-
-
-    
+const dispatch = useDispatch();
+const modalStatus = useSelector(state=>state.todoReducer.modal);
     return (
         <>
             <div>
+            
                 <Header />
                 <Input />
-                <List/>
-
+                <Space/>
+                <ListHeader/>
+                <List />
+                {/* <Modal/>
+                <button onClick={()=>{dispatch(showModal())
+                console.log(modalStatus)
+                }}>Show Modal</button> */}
             </div>
         </>
     )

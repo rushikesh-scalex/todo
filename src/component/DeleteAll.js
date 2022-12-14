@@ -7,7 +7,7 @@ const DeleteAll = () => {
     
   return (
     <>
-        <div 
+        <div title='Delete all todos'
         onClick={()=>dispatch(removeTodo())}
         className='deleteDiv'>
         Delete All
